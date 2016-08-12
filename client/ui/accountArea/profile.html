@@ -1,0 +1,15 @@
+<template name="profile">
+    <a href="/" class="btn btn-sm btn-info"> Minstant Home page</a>
+    <div class="jumbotron">
+        <div class="container-fluid">
+        <div class="thumbnail col-xs-12">
+            <div class="thumb-img col-xs-12 col-sm-6 col-md-4 col-lg-3 pull-left">
+                <img src="{{userObject.profile.image}}"/>
+            </div>
+            <div class="caption col-xs-12 col-sm-6 col-md-8 col-lg-9 pull-right">
+                <h1>{{userObject.username}}</h1>
+            </div>
+        </div>
+        </div>
+    </div>
+</template>

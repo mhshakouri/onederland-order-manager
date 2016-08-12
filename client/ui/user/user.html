@@ -1,0 +1,11 @@
+<!-- display an individual user -->
+<template name="available_user">
+	{{#if notMyUser _id}}
+		<div class="col-xs-6 col-md-3 user-thumb-holder">
+			<a href="/chat/{{_id}}" class="thumbnail user-thumb">
+				<span class="username badge">{{username}}</span>
+				<img src="{{getAvatar _id}}" class="avatar_img">
+			</a>
+		</div>
+	{{/if}}
+</template>

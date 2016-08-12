@@ -1,0 +1,21 @@
+<!-- top level template for the nav bar -->
+<template name="navbar">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+          Onederland Order Manager
+      </a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        {{#if currentUser}}
+          <a class="btn btn-inverse btn-sm js-logout" href="#">Log out</a>
+        {{else}}
+          <a class="btn btn-inverse btn-sm" href="{{pathFor route='signin'}}">Log in</a>
+        {{/if}}
+      </li>
+    </ul>
+  </div>
+</nav>
+</template>

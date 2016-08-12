@@ -1,0 +1,20 @@
+<template name="userSidebar">
+    {{#with userObject}}
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+            {{> editYourAvatarModal}}
+            <p>
+            <img src="{{profile.image}}"/>
+            <hr/>
+            Welcome 
+            <span class="badge">{{username}}!</span>
+            </p>
+            {{#if checkAvatar}}
+                <a class="editAvatar btn btn-default"> Edit your avatar</a>
+            {{else}}
+                <p> You have not yet provided an avatar,
+                <a class="editAvatar btn btn-default btn-sm"> Add an avatar image</a>
+                </p>
+            {{/if}}
+        </div>
+    {{/with}}
+</template>

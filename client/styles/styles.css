@@ -1,0 +1,60 @@
+/* CSS declarations go here */
+.user_avatar {
+  min-height: 100px;
+  text-align: center;
+}
+.avatar_img {
+  max-height: 65px;
+}
+.thumbnail img {
+  margin-right: 0;
+}
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background: #eeeeee;
+}
+html nav,
+body nav {
+  position: relative !important;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 999;
+}
+html .navbar-inverse,
+body .navbar-inverse {
+  box-shadow: 0 2px 10px 0 rgba(220, 220, 220, 0.5);
+  margin-top: 10px;
+}
+span.username {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+.user-thumb-holder {
+  margin-top: 0 !important;
+  transition: all 200ms ease-in-out;
+}
+.user-thumb-holder .user-thumb {
+  box-shadow: 0 0 10px 0 rgba(135, 206, 250, 0.65);
+  transition: all 200ms ease-in-out;
+  border: none;
+  background: rgba(0, 191, 255, 0.35);
+}
+.user-thumb-holder .user-thumb:hover {
+  background: #87cefa;
+}
+.user-thumb-holder .user-thumb:hover span.username {
+  color: black;
+}
+.modal.in .modal-dialog {
+  z-index: 99999;
+}
+img.inchat_avatar {
+  max-height: 48px;
+}
