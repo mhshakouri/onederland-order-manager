@@ -1,0 +1,44 @@
+<template name="produtcsList">
+        <div class="row">
+            <div class="jumbotron category-header">
+                    {{#with categoryInfo}}
+                        {{#if editMode}}
+                            <h3>Edit Category Info</h3>
+                            {{> quickForm collection="Categories" id="addcategory" type="update" doc=categoryInfo}}
+                            <p><a href="#!" class="btn btn-success js-close-edit" role="button">Close editing view</a></p>
+                        {{else}}
+                            <div class="col-sx-12 col-sm-4 col-md-3">
+                                <img src="{{image}}" alt="{{title}}" class="catheadimg"/>
+                            </div>
+                            <div class="col-sx-12 col-sm-6 col-md-6">
+                                <h2>{{title}}</h2>
+                                <p>{{desc}}</p>
+                            </div>
+                            <div class="col-xs-12 colx-sm-2 col-md-3 cat-head-button-cont">
+                                <p><a href="#!" class="btn btn-info js-edit-category" role="button">Edit Category</a>
+                                <a href="#!" class="btn btn-danger js-remove-category" role="button">Remove Category</a></p>
+                            </div>
+                        {{/if}}
+                    {{/with}}
+            </div>
+        </div>
+        <div class="row">
+            {{#each productsListItems}}
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        {{#if image}}<img src="{{image}}" alt="{{title}}">{{/if}}
+                        <div class="caption">
+                            <h3>{{title}}</h3>
+                            <p>{{desc}}</p>
+                            {{#if aTOMode}}
+                                <p>
+                                    <input type='number' name='myNumber' value='0' size='20' class='js-amount-to-add'/>
+                                    <a href="#" class="btn btn-success js-add-to-order" role="button">Add to Order</a>
+                                </p>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+</template>

@@ -1,5 +1,6 @@
 
-Template.ordersList.helpers({
+
+/*Template.ordersList.helpers({
    ordersItem: function(){
       return Orders.find();
    },
@@ -25,7 +26,6 @@ Template.orderView.events({
    }
 });
 
-/*
 Template.ordersList.helpers({
   orders:function(){
     return Orders.find();

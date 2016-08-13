@@ -7,14 +7,33 @@
           Onederland Order Manager
       </a>
     </div>
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-left">
       <li>
-        {{#if currentUser}}
-          <a class="btn btn-inverse btn-sm js-logout" href="#">Log out</a>
-        {{else}}
-          <a class="btn btn-inverse btn-sm" href="{{pathFor route='signin'}}">Log in</a>
-        {{/if}}
+        <a href="/"><span class="glyphicon glyphicon-home"></span> Categories</a>
       </li>
+      <li>
+        <a href="/addOrder" class="js-add-new-order"><span class="glyphicon glyphicon-plus"></span> Order</a>
+      </li>
+      <li>
+        <a href="/addCategory"><span class="glyphicon glyphicon-plus"></span> Category</a>
+      </li>
+      <li>
+        <a href="/addProduct"><span class="glyphicon glyphicon-plus"></span> Product</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        {{#if currentUser}}
+          <li>
+              <a class="btn btn-inverse btn-sm js-profile" href="/profile">Your Profile</a>
+          </li>
+          <li>
+              <a class="btn btn-inverse btn-sm js-logout" href="#">Log out</a>
+          </li>
+            {{else}}
+          <li>
+              <a class="btn btn-inverse btn-sm" href="{{pathFor route='signin'}}">Log in</a>
+          </li>
+        {{/if}}
     </ul>
   </div>
 </nav>

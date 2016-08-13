@@ -10,4 +10,18 @@ Meteor.methods({
 			return id;
 		}
 	},
+	"removeAllProductsByCat": function(catIdtoRemoveProducts){
+		if(!this.userId){
+			return false;
+		} else {
+			Products.remove({'category':catIdtoRemoveProducts});
+		}
+	},
+	"removeCatById": function(catIdtoRemove){
+		if(!this.userId){
+			return false;
+		} else {
+			Categories.remove({_id:catIdtoRemove});
+		}
+	}
 });

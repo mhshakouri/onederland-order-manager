@@ -1,4 +1,14 @@
 /* CSS declarations go here */
+@font-face {
+  font-family: 'BBCNassim';
+  src: local('☺'), local('BBCNassim'), url('/fonts/bbcnassim.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body {
+  font-family: BBCNassim;
+}
 .user_avatar {
   min-height: 100px;
   text-align: center;
@@ -57,4 +67,49 @@ span.username {
 }
 img.inchat_avatar {
   max-height: 48px;
+}
+.side-panel-products li {
+  text-indent: -10px;
+  text-align: left;
+  padding: 0 !important;
+}
+.side-panel-products li a {
+  padding: 15px 25px !important;
+}
+.category-header {
+  background: whitesmoke;
+  box-shadow: 0 0 10px 0 gray;
+  padding: 0;
+  padding-left: 0 !important;
+  padding-top: 20px;
+}
+img.catheadimg {
+  max-width: calc(100%);
+}
+.cat-head-button-cont a {
+  width: calc(100%);
+  margin-bottom: 15px;
+}
+.minheighthumb {
+  min-height: 400px;
+  transition-property: all;
+  transition-duration: 950ms;
+}
+.minheighthumb .thumbnail {
+  min-height: 400px;
+  transition-property: all;
+  transition-duration: 950ms;
+}
+.minheighthumb .thumbnail * {
+  transition-property: all;
+  transition-duration: 950ms;
+}
+html,
+body {
+  background-color: #9e9e9e;
+  overflow-x: hidden;
+}
+html .container-fluid,
+body .container-fluid {
+  overflow-x: hidden;
 }

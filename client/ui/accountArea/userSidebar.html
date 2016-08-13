@@ -1,6 +1,9 @@
 <template name="userSidebar">
-    {{#with userObject}}
+
+</template>
+<template name="nousetemp">
         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+        {{#with userObject}}
             {{> editYourAvatarModal}}
             <p>
             <img src="{{profile.image}}"/>
@@ -15,6 +18,22 @@
                 <a class="editAvatar btn btn-default btn-sm"> Add an avatar image</a>
                 </p>
             {{/if}}
-        </div>
-    {{/with}}
+            <hr/>
+            <ul class="nav nav-pills nav-stacked nav-pills-stacked-example side-panel-products">
+                <li role="presentation" class="btn btn-default">
+                    <a href="/addOrder" class="js-add-new-order"><span class="glyphicon glyphicon-plus"></span> Order</a>
+                </li>
+                <hr>
+                <li role="presentation" class="btn btn-default">
+                    <a href="/"><span class="glyphicon glyphicon-home"></span> Categories</a>
+                </li>
+                <li role="presentation" class="btn btn-default">
+                    <a href="/addCategory"><span class="glyphicon glyphicon-plus"></span> Category</a>
+                </li>
+                <li role="presentation" class="btn btn-default">
+                    <a href="/addProduct"><span class="glyphicon glyphicon-plus"></span> Product</a>
+                </li>
+            </ul>
+        {{/with}}
+    </div>
 </template>
